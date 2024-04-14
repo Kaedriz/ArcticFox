@@ -1,6 +1,6 @@
 # Arctic Fox
 
-### 🦊 Firefox theme which purpose is to give you capabilites to customize your firefox. This theme also aims to take some things from Arc Browser (hence the name), but in a customizable way, nothing is forced upon user.
+ 🦊 Firefox theme, which purpose is to give you capabilities to customize your Firefox. This theme also aims to take some things from Arc Browser (hence the name), but in a customizable way, nothing is forced upon user.
 
 ## ✅ Features
 - todo
