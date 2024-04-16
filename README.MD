@@ -6,15 +6,15 @@
 - todo
 - todo
 
-## Customization
+## 🛠️ Customization
 todo
 
 ## 📷 Screenshots
 todo
 
-## Installation
+## 🖥️ Installation
 1. todo
 2. todo
 
-## Credits
+## 🎬 Credits
 todo
