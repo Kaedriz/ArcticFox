@@ -1,0 +1,64 @@
+/* Add icons to context menu (On right click) */
+@media (-moz-bool-pref: "arcticfox.context-menu.icons") {
+	#contentAreaContextMenu > menuitem,
+	#contentAreaContextMenu > menu {
+		position: relative;
+	}
+
+	#contentAreaContextMenu > menuitem::before,
+	#contentAreaContextMenu > menu::before {
+		content: "";
+		position: absolute;
+		fill: currentColor;
+		-moz-context-properties: fill;
+		width: 16px;
+		height: 16px;
+	}
+
+	/* Icons for specific context menu items */
+	/* TODO: Add all remaining icons */
+	#context-kkk::before {
+		background-image: url("icons/");
+	}
+	#context-kkk::before {
+		background-image: url("icons/");
+	}
+	#context-savepage::before {
+		background-image: url("icons/save_page.svg");
+	}
+	#context-sendpagetodevice::before {
+		background-image: url("icons/send_to_device.svg");
+	}
+	#context-selectall::before {
+		background-image: url("icons/select_all.svg");
+	}
+	#context-inspect::before {
+		background-image: url("icons/inspect.svg");
+	}
+	#context-inspect-a11y::before {
+		background-image: url("icons/accessibility.svg");
+	}
+	#context-viewsource::before {
+		background-image: url("icons/view_source.svg");
+	}
+	#context-take-screenshot::before {
+		background-image: url("icons/screenshot.svg");
+	}
+
+	/* Icons for extensions context menu items */
+	/* Raindrop */
+	/* Temporarily disabled */
+	/* #jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-menuitem-_save_page {} */
+
+	#side-view_mozilla_org-menuitem-_open-in-sidebar {
+		/* Hide previous icon */
+		& > .menu-iconic-left {
+			visibility: hidden !important;
+		}
+
+		&::before {
+			/* TODO: Placeholder image */
+			background-image: url("icons/sideview.svg");
+		}
+	}
+}
