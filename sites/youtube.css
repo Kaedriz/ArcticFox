@@ -1,0 +1,19 @@
+@media (-moz-bool-pref: "arcticfox.sites.youtube") {
+	@-moz-document domain(youtube.com) {
+		ytd-app {
+			/* background: rgb(35, 35, 42); */
+			background: linear-gradient(135deg, #bb4b3b, #2433a3, #bb4b3b, #2433a3);
+			animation: animateBg 5s infinite linear;
+		}
+
+		@keyframes animateBg {
+			0% {
+				background-position: 0 0;
+			}
+
+			100% {
+				background-position: 100% 0;
+			}
+		}
+	}
+}
