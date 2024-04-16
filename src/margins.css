@@ -1,0 +1,68 @@
+/* this adds borders around most panels in browser, similar to ones you would see in Arc browser */
+
+/* TODO: Move to separate file: sidebar.css ? */
+/* Sidebar (History, Bookmarks etc.) */
+#sidebar-box {
+	margin: 0 0 6px 6px;
+	border-radius: 10px;
+	background-color: darkgrey !important;
+	max-width: none !important;
+	min-width: 0px !important;
+
+	/* Change opposite border when user changes on which side panel should appear, to leave space to resize handle */
+	&[positionend] {
+		margin: 0 6px 6px 0;
+	}
+}
+
+/* Sidebar, when in fullscreen */
+#main-window[inFullscreen] #sidebar-box {
+	margin-top: 6px;
+}
+
+/* Browser content */
+/* TODO: Move from here to theme file/colors? */
+#tabbrowser-tabpanels {
+	background: none !important;
+}
+
+/* Default margins for browser panel displaying content */
+#browser #tabbrowser-tabpanels > .browserSidebarContainer {
+	margin: 0 6px 6px 6px;
+	border-radius: 13px;
+	overflow: hidden;
+}
+
+/* Switch top margin when in fullscreen */
+#main-window[inFullscreen]
+	#browser
+	#tabbrowser-tabpanels
+	> .browserSidebarContainer {
+	margin-top: 6px;
+}
+
+/* Margin when side panel is on the left, and not hidden */
+#browser:has(#sidebar-box:not([hidden]):not([positionend]))
+	#tabbrowser-tabpanels
+	> .browserSidebarContainer {
+	margin-left: 0px;
+}
+
+/* Margin when side panel is on the right, and not hidden */
+#browser:has(#sidebar-box:not([hidden])[positionend])
+	#tabbrowser-tabpanels
+	> .browserSidebarContainer {
+	margin-right: 0px;
+}
+
+/* Splitter between main browser window and sidebar */
+#sidebar-splitter {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+/* TODO: Fix slight bounce when opening */
+/* Find Bar */
+.browserSidebarContainer findbar {
+	border-top: 6px solid transparent !important;
+}
