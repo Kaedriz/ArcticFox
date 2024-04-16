@@ -1,7 +1,14 @@
-/* Ultimatum */
+/* ArcticFox */
 
-@import url(src/borders.css);
-@import url(src/window-contorls.css);
+/* Base themes */
+@import url(LightFox.theme.css);
+@import url(DarkFox.theme.css);
+
+/* Core components */
+@import url(src/margins.css);
+@import url(src/window-controls.css);
 @import url(src/vertical-tab.css);
 @import url(src/navigation-bar.css);
+@import url(src/app-menu.css);
+@import url(src/context-menu.css);
 @import url(src/background.css);
