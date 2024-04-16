@@ -1,3 +1,11 @@
 /* Custom CSS for sites goes here */
 
+/* Base color variables */
+@import url(LightFox.theme.css);
+@import url(DarkFox.theme.css);
+
+/* Custom color for scrollbar */
+@import url(src/scrollbar.css);
+
+/* Sites */
 @import url(sites/youtube.css);
