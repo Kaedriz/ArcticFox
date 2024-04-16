@@ -1,17 +1,17 @@
 /* TODO: Add conditional to user pref */
 body {
-    /* background: linear-gradient(135deg, #bb4b3b 0%, #2433a3 100%); */
-    background: linear-gradient(135deg, #bb4b3b, #2433a3, #bb4b3b, #2433a3);
-    background-size: 300% 300%;
-    animation: animateBg 5s infinite linear;
+	/* background: linear-gradient(135deg, #bb4b3b 0%, #2433a3 100%); */
+	background: linear-gradient(135deg, #bb4b3b, #2433a3, #bb4b3b, #2433a3);
+	background-size: 300% 300%;
+	animation: animateBg 5s infinite linear;
 }
 
 @keyframes animateBg {
-    0% {
-        background-position: 0 0;
-    }
+	0% {
+		background-position: 0 0;
+	}
 
-    100% {
-        background-position: 100% 100%;
-    }
+	100% {
+		background-position: 100% 100%;
+	}
 }
