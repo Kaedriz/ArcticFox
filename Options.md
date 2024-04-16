@@ -1,2 +1,0 @@
-# Options for this theme
-
