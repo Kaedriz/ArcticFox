@@ -12,6 +12,7 @@
 		height: 16px;
 	}
 
+	/* Needs explanation */
 	#appMenu-zoom-controls::before,
 	#appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
 		display: flex;
@@ -20,6 +21,7 @@
 		min-height: 16px;
 	}
 
+	/* Setting icons for particular menu items */
 	#appMenu-new-tab-button2 {
 		list-style-image: url("chrome://browser/skin/new-tab.svg");
 	}
@@ -74,10 +76,12 @@
 	#appMenu-zoom-controls::before {
 		background-image: url("chrome://browser/skin/fullscreen.svg");
 	}
+
 	/* Use account-button icon for signed in sync item */
 	#appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
 		background-image: var(--avatar-image-url);
 	}
+
 	/* Add somewhat hacky separator to zoom controls so it looks consistent */
 	#appMenu-protonMainView > .panel-subview-body::after {
 		content: "";
