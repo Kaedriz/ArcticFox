@@ -15,6 +15,7 @@
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 
+	/* Change background of indicator on hover */
 	.tab-icon-overlay:hover {
 		background-color: rgba(0, 0, 0, 0.4) !important;
 	}
