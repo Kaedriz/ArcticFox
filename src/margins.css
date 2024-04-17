@@ -34,7 +34,7 @@
 
 /* Browser panel displaying content */
 #tabbrowser-tabpanels browser[type="content"] {
-	border-radius: 13px;
+	border-radius: 12px;
 	overflow: hidden;
 }
 
