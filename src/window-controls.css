@@ -1,30 +1,28 @@
-/* Override window controls changing when using themes */
+/* Provide window control icons similar to KDE Breeze when using themes */
 
 /* Taken from https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_force_linux_system_style.css */
 
+/* TODO: Styling could be changed a little */
 @media (-moz-bool-pref: "arcticfox.linux-windows-controls") {
-	.titlebar-button {
-		list-style-image: none !important;
-		appearance: auto !important;
+	/* Dynamic color for window controls icons */
+	.titlebar-buttonbox .toolbarbutton-icon {
+		fill: var(--toolbarbutton-icon-fill);
+		-moz-context-properties: fill !important;
 	}
 
-	.titlebar-button > .toolbarbutton-icon {
-		background: none !important;
+	/* Icons for window controls */
+	.titlebar-min > .toolbarbutton-icon {
+		background-image: url("icons/minimize.svg") !important;
 	}
-
-	.titlebar-min {
-		-moz-default-appearance: -moz-window-button-minimize !important;
+	.titlebar-max > .toolbarbutton-icon {
+		/* Should be rotate 180deg */
+		transform: rotate(180deg);
+		background-image: url("icons/minimize.svg") !important;
 	}
-
-	.titlebar-max {
-		-moz-default-appearance: -moz-window-button-maximize !important;
+	.titlebar-restore > .toolbarbutton-icon {
+		background-image: url("icons/restore.svg") !important;
 	}
-
-	.titlebar-restore {
-		-moz-default-appearance: -moz-window-button-restore !important;
-	}
-
-	.titlebar-close {
-		-moz-default-appearance: -moz-window-button-close !important;
+	.titlebar-close > .toolbarbutton-icon {
+		background-image: url("icons/close.svg") !important;
 	}
 }
