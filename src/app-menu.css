@@ -8,6 +8,8 @@
 		fill: currentColor;
 		-moz-context-properties: fill;
 		margin-inline: 0 8px !important;
+		width: 16px;
+		height: 16px;
 	}
 
 	#appMenu-zoom-controls::before,
