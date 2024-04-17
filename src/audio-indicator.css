@@ -1,0 +1,26 @@
+/* Always show audio indicator, on top of tab icon, instead of replacing it */
+
+@media (-moz-bool-pref: "arcticfox.audio-indicator") {
+	/* Make tab icon and loading icon always visible */
+	.tab-icon-image,
+	.tab-throbber {
+		opacity: 1 !important;
+	}
+
+	/* Move audio indicator slightly */
+	.tab-icon-overlay:is([soundplaying]),
+	.tab-icon-overlay:is([muted]) {
+		opacity: 1 !important;
+		transform: translate(-7px, 7px);
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+
+	.tab-icon-overlay:hover {
+		background-color: rgba(0, 0, 0, 0.4) !important;
+	}
+
+	/* Change indicator color for muted audio */
+	.tabbrowser-tab .tab-icon-overlay[muted] {
+		fill: #df5c5c !important;
+	}
+}
