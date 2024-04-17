@@ -26,11 +26,22 @@
 	background: none !important;
 }
 
-/* Default margins for browser panel displaying content */
+/* Default margins for browser panel with devtools */
 #browser #tabbrowser-tabpanels > .browserSidebarContainer {
 	margin: 0 6px 6px 6px;
+}
+
+/* Browser panel displaying content */
+#tabbrowser-tabpanels browser[type="content"] {
 	border-radius: 13px;
 	overflow: hidden;
+}
+
+/* Splitter between browser panel and dev tools */
+.devtools-side-splitter {
+	background-color: transparent !important;
+	margin: 0 !important;
+	border: 0 !important;
 }
 
 /* Switch top margin when in fullscreen */
