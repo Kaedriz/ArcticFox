@@ -73,8 +73,15 @@
 	border: none !important;
 }
 
-/* TODO: Fix slight bounce when opening */
 /* Find Bar */
 .browserSidebarContainer findbar {
+	background-color: transparent !important;
+	border: 0 !important;
+	padding: 0 !important;
 	border-top: 6px solid transparent !important;
+}
+
+.browserSidebarContainer findbar[hidden] {
+	/* TODO: Add variables? */
+	margin-bottom: calc(-1 * (28px + 12px + 1px - 6px)) !important;
 }
