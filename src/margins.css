@@ -4,10 +4,11 @@
 /* Sidebar (History, Bookmarks etc.) */
 #sidebar-box {
 	margin: 0 0 6px 6px;
-	border-radius: 10px;
+	border-radius: 12px;
 	background-color: darkgrey !important;
 	max-width: none !important;
 	min-width: 0px !important;
+	overflow: hidden;
 
 	/* Change opposite border when user changes on which side panel should appear, to leave space to resize handle */
 	&[positionend] {
