@@ -16,7 +16,9 @@
 
 ## 🛠️ Customization
 
-todo
+todo: slight description of possible customization
+
+For full list of available customization and comparison go [here](https://github.com/Kaedriz/ArcticFox/wiki/Options).
 
 ## 📷 Screenshots
 
