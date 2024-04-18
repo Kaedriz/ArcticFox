@@ -1,0 +1,12 @@
+/* Global changes affecting most extensions */
+
+/* Changing slightly extension badge counter */
+@media (-moz-bool-pref: "arcticfox.extension-badge") {
+	.unified-extensions-item-action-button .toolbarbutton-badge:not(:empty) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		aspect-ratio: 1/1;
+		border-radius: 10px !important;
+	}
+}
