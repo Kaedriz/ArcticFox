@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
-		color-scheme: dark !important;
+		/*! Breaks sites without support for it */
+		/* color-scheme: dark !important; */
 
 		/* Variables here */
 	}
