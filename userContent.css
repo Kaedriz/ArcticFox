@@ -9,3 +9,6 @@
 
 /* Sites */
 @import url(sites/youtube.css);
+
+/* Extensions themes */
+@import url(src/extensions/twitch-live.css);

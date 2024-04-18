@@ -1,0 +1,32 @@
+/* Twitch Live */
+/* url */
+
+#PanelUI-webext-_55d8b663-ebee-46e9-886b-2539b1ebc9c7_-BAV
+	.webextension-popup-browser
+	body {
+	background-color: blue !important;
+}
+
+/* TODO: Change logo in dark scheme, or just remove it */
+/* TODO: Slight redesign maybe in the future */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: rgb(27, 27, 27);
+		--foreground-color: rgb(177, 177, 177);
+	}
+
+	body:has(#streamContainer) {
+		background-color: var(--background-color) !important;
+		color: var(--foreground-color) !important;
+	}
+
+	#streamContainer {
+		background-color: transparent !important;
+
+		& .streamDiv:hover {
+			background-color: color-mix(in srgb, var(--background-color) 100%, var(--foreground-color) 30%) !important;
+		}
+	}
+}
+
