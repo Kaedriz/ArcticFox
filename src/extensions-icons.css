@@ -1,6 +1,19 @@
 @media (-moz-bool-pref: "arcticfox.extensions-icons") {
+	/** Pattern for new icons */
+	/* Name of extension */
+	/* URL of the extension, Firefox addons one */
+	/*
+	#uniqueID_of_the_extension .toolbarbutton-icon {
+		list-style-image: url("icons/name-of-extension.svg");
+	}
+	*/
+
+	/* uBlock Origin */
+	/* https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/ */
+
+
 	/* Twitch Live */
-	/* url */
+	/* https://addons.mozilla.org/en-US/firefox/addon/twitch-live-for-firefox/ */
 	#_55d8b663-ebee-46e9-886b-2539b1ebc9c7_-browser-action .toolbarbutton-icon {
 		list-style-image: url("icons/twitch-live.svg");
 	}
