@@ -17,3 +17,5 @@
 @import url(src/app-menu.css);
 @import url(src/context-menu.css);
 @import url(src/background.css);
+
+@import url(src/extensions/global.css);
