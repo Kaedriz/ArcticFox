@@ -10,7 +10,7 @@
 
 -   All features are customizable, turned off by default. You choose what you want.
 -   Coherent UI, bridging the gap between custom icons and Firefox UI.
--   Custom styling fore certain sites, to match their colors to Firefox ones.
+-   Custom styling for certain sites, to match their colors to Firefox ones.
 -   Vertical Sidebar, made only with CSS, no sidepanel used, so no conflict with history tab, sideview etc. (Albeit dragging tabs won't work in it 🫤)
 -   And many other, ofter smaller fixes that improve Firefox UI, scroll to Customization to find out.
 
