@@ -1,6 +1,6 @@
 # Arctic Fox
 
-🦊 Firefox theme, which purpose is to give you capabilities to customize your Firefox. This theme also aims to take some things from Arc Browser (hence the name), but in a customizable way, nothing is forced upon user.
+🦊 Firefox theme, which purpose is to give you capabilities to customize your Firefox. This theme also aims to take some things from Arc Browser (hence the name), but in a customizable way. But bear in mind that this isn't one size fit it all theme. It's a firstly a theme I would want to use, then some options options on top of that, that are easy to implement. If you want one instead, go check out [this repo](https://github.com/MrOtherGuy/firefox-csshacks) full of css hacks.
 
 <p align="center">
 	<img src="media/Logo.svg" height="256px" label="Arctic Fox">
