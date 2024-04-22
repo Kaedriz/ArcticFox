@@ -42,4 +42,21 @@
 			opacity: 0.5;
 		}
 	}
+
+	/* Style 4 */
+	/* Partial overlay, gradient */
+	@media (-moz-bool-pref: "arcticfox.container-indicator.style-4") {
+		.tabbrowser-tab .tab-context-line {
+			--bgcolor: color-mix(
+				in srgb,
+				var(--identity-icon-color) 100%,
+				transparent 0%
+			);
+
+			height: 70% !important;
+			margin: 0 !important;
+			background: linear-gradient(var(--bgcolor), transparent) !important;
+			opacity: 0.5;
+		}
+	}
 }
