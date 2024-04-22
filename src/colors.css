@@ -1,0 +1,76 @@
+/* TODO: Add conditional to user pref */
+/*? Break this file into multiple, functional object, each congaing it's style? */
+
+/* body {
+	background: linear-gradient(135deg, #bb4b3b, #2433a3, #bb4b3b, #2433a3);
+	background-size: 300% 300%;
+	animation: animateBg 5s infinite linear;
+} */
+
+/* @keyframes animateBg {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 100% 100%;
+	}
+} */
+
+/* Browser background, if margins are enabled, or navigation toolbar is transparent */
+#browser {
+	background-color: green !important;
+}
+
+/* Main toolbar element, styling whole navigator bar if none others is set */
+#navigator-toolbox {
+	background-color: var(--navigation-bgcolor) !important;
+}
+
+/* Tabs bar, with tabs and window controls */
+#TabsToolbar {
+	background-color: var(--tabstoolbar-bgcolor) !important;
+	/* TODO: Add inactive conditional */
+}
+
+/* Navigation bar, styling customizable bar with address bar and other buttons */
+#nav-bar {
+	background-color: var(--customizablebar-bgcolor) !important;
+}
+
+/* Foreground color of all tabs */
+.tab-label {
+	color: var(--tabs-fgcolor) !important;
+}
+
+/* Background color of all tabs */
+.tab-background {
+	background-color: var(--tabs-bgcolor);
+}
+
+/* TODO: Missing hover state for tab background */
+
+/* Background of active tab */
+.tabbrowser-tab .tab-background[selected] {
+	background-color: var(--active-tabs-bgcolor) !important;
+}
+
+/* Background of multiple selected tabs */
+.tab-background[multiselected] {
+	background-color: var(--selected-tabs-bgcolor) !important;
+}
+
+/* Background of pinned tabs */
+.tabbrowser-tab[pinned] .tab-background {
+	background-color: var(--pinned-tabs-bgcolor) !important;
+
+	/* Pinned, active tab */
+	&[selected] {
+		background-color: var(--active-tabs-bgcolor) !important;
+	}
+}
+
+/* Background of address bar */
+#urlbar-background {
+	background-color: var(--address-bar-bgcolor) !important;
+}
