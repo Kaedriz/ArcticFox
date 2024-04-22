@@ -24,7 +24,7 @@
 /* Browser content */
 /* TODO: Move from here to theme file/colors? */
 #tabbrowser-tabpanels {
-	background: none !important;
+	/* background: none !important; */
 }
 
 /* Default margins for browser panel with devtools */
@@ -36,6 +36,19 @@
 #tabbrowser-tabpanels browser[type="content"] {
 	border-radius: 12px;
 	overflow: hidden;
+}
+
+/* Changing status bat slightly to match margins */
+#statuspanel {
+  position: absolute;
+	bottom: 5px;
+  left: 5px;
+
+	& #statuspanel-label {
+		/** Move to another file */
+		border: 0 !important;
+		background-color: var(--tabpanel-background-color) !important;
+	}
 }
 
 /* Splitter between browser panel and dev tools */
