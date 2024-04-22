@@ -8,20 +8,20 @@
 	}
 
 	/* Move audio indicator slightly */
-	.tab-icon-overlay:is([soundplaying]),
-	.tab-icon-overlay:is([muted]) {
+	.tab-icon-overlay:not([crashed])[soundplaying],
+	.tab-icon-overlay:not([crashed])[muted] {
 		opacity: 1 !important;
 		transform: translate(-7px, 7px);
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 
 	/* Change background of indicator on hover */
-	.tab-icon-overlay:hover {
+	.tab-icon-overlay:not([crashed]):hover {
 		background-color: rgba(0, 0, 0, 0.4) !important;
 	}
 
 	/* Change indicator color for muted audio */
-	.tabbrowser-tab .tab-icon-overlay[muted] {
+	.tabbrowser-tab .tab-icon-overlay:not([crashed])[muted] {
 		fill: #df5c5c !important;
 	}
 }
