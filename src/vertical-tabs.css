@@ -1,0 +1,199 @@
+/* File with modifications that change Tabs Bar to be vertical */
+
+@media (-moz-bool-pref: "arcticfox.vertical-tabs") {
+	arrowscrollbox#tabbrowser-arrowscrollbox[orient="horizontal"] {
+		flex-direction: column !important;
+	}
+
+	/* Container for tab container & toolbar buttons */
+	#TabsToolbar-customization-target {
+		/* Settings up vertical orientation, as flex-direction is being overwritten by xul */
+		flex-direction: column;
+		-moz-box-orient: vertical !important;
+
+		height: 100% !important;
+		width: 100% !important;
+	}
+
+	/* Resetting toolbar buttons margin */
+	#TabsToolbar-customization-target toolbarbutton {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	/* Container with tabs */
+	scrollbox[orient="horizontal"] {
+		/* Settings up vertical orientation, as flex-direction is being overwritten by xul */
+		display: -webkit-box !important;
+		-moz-box-orient: vertical !important;
+
+		/* Fix to overflowing bug */
+		padding-inline: 0 !important;
+		overflow: visible !important;
+	}
+
+	#titlebar {
+		z-index: 6;
+	}
+
+	/* Window controls */
+	.titlebar-buttonbox-container {
+		position: absolute;
+		top: 9px;
+		right: 9px;
+		z-index: 10;
+	}
+
+	/* Hide duplicate window controls */
+	#TabsToolbar .titlebar-buttonbox-container {
+		display: none;
+	}
+
+	/* Make space for alternate position in nav bar fo window controls */
+	#nav-bar {
+		/* For KDE */
+		padding-right: 93px !important;
+	}
+
+	#TabsToolbar {
+		position: absolute;
+		/*! Change to var */
+		top: 40px;
+		left: 0;
+		/*! Change to var */
+		/* width: 288px; */
+		width: 36px;
+		margin: 6px;
+		/*! Change to var */
+		height: calc(100% - 52px);
+		background-color: rgb(80, 30, 30) !important;
+
+		/* Fixing change of color of tabs bar in active windows */
+		&:-moz-window-inactive {
+			color: initial !important;
+		}
+	}
+
+	/* Remove top margin when in fullscreen */
+	:root[inFullscreen] #TabsToolbar {
+		top: 0;
+		height: 100%;
+		transition: top 0.8s ease-out, height 0.8s ease-out;
+	}
+
+	/* Remove left padding from tabs bar */
+	#tabbrowser-tabs {
+		padding-inline: 0 !important;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scrollbar-width: none !important;
+		/* scrollbar-color: red blue !important; */
+		/* scrollbar-color: transparent transparent !important; */
+
+		/* Always show new tab button */
+		&[overflow] #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
+			display: flex !important;
+		}
+	}
+
+	/* Hide tabs scroll buttons */
+	#scrollbutton-up,
+	#scrollbutton-down,
+	/* Hide spacer for window controls */
+	.titlebar-spacer {
+		display: none !important;
+	}
+
+	/*! Fixing change of color of tabs bar in active windows */
+	#titlebar:-moz-window-inactive {
+		opacity: 1 !important;
+	}
+
+	:root[inFullscreen]:not([macOSNativeFullscreen])
+		toolbar:not([fullscreentoolbar="true"]) {
+		visibility: visible !important;
+	}
+
+	:root:has(#fullscr-toggler:not([hidden])) .titlebar-buttonbox-container {
+		visibility: hidden !important;
+	}
+
+	#browser {
+		background-color: green;
+		/* background-color: var(--tabpanel-background-color); */
+	}
+
+	.tabbrowser-tab {
+		max-width: unset !important;
+		/* max-width: 36px !important; */
+		min-width: 36px !important;
+
+		border-radius: 10px !important;
+		padding: 0 !important;
+		padding-inline: 0 !important;
+		margin: 2px 0 2px 0 !important;
+		background-color: red !important;
+
+		/* Fix for invisible tabs after closing */
+		&:not([fadein]) {
+			display: none !important;
+		}
+
+		/* Fix tab background */
+		& .tab-background {
+			margin: 0 !important;
+			border-radius: 10px !important;
+		}
+
+		/* Center tab icon */
+		& .tab-icon-stack {
+			min-width: 20px;
+			justify-content: center;
+
+			& .tab-icon-image {
+				margin: 0 !important;
+			}
+		}
+
+		/* Hide tab close button */
+		& .tab-close-button {
+			visibility: hidden;
+		}
+	}
+
+	/* Add space between tabs */
+	.tabbrowser-tab:first-of-type {
+		margin-top: 0px !important;
+	}
+
+	/* Style New Tab button */
+	#tabbrowser-arrowscrollbox-periphery {
+		margin-top: 3px;
+		overflow: clip;
+		/*! Change to var */
+		border-radius: 10px;
+
+		#tabs-newtab-button {
+			width: 100%;
+
+			&:hover {
+				background-color: blue !important;
+			}
+		}
+
+		#tabs-newtab-button:hover > .toolbarbutton-icon {
+			background-color: transparent !important;
+		}
+	}
+
+	/* Remove margin in vertical layout from pinned tabs */
+	#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+		> #tabbrowser-arrowscrollbox
+		> .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+		margin-inline-start: 0 !important;
+	}
+
+	#tabbrowser-tabpanels {
+		margin-left: 300px;
+	}
+}

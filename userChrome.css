@@ -12,10 +12,10 @@
 @import url(src/extensions-menu.css);
 @import url(src/extensions-icons.css);
 @import url(src/window-controls.css);
-@import url(src/vertical-tab.css);
+@import url(src/vertical-tabs.css);
 @import url(src/navigation-bar.css);
 @import url(src/app-menu.css);
 @import url(src/context-menu.css);
-@import url(src/background.css);
+/* @import url(src/colors.css); */
 
 @import url(src/extensions/global.css);
