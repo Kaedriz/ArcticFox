@@ -15,37 +15,427 @@
 		height: 16px;
 	}
 
+	/* TODO: Also support tab context menu */
+	#tabContextMenu {
+		/*  */
+	}
+
 	/* Icons for specific context menu items */
 	/* TODO: Add all remaining icons */
-	#context-kkk::before {
-		background-image: url("icons/");
+	/* No Spelling Suggestions */
+	#spell-no-suggestions::before {
+		background-image: url("icons/save_page.svg");
 	}
-	#context-kkk::before {
-		background-image: url("icons/");
+
+	/* Add to Dictionary */
+	#spell-add-to-dictionary::before {
+		background-image: url("icons/save_page.svg");
 	}
+
+	/* Undo Add To Dictionary */
+	#spell-undo-add-to-dictionary::before {
+		background-image: url("icons/save_page.svg");
+	}
+
+	/* ???? */
+	#context-openlinkincurrent::before {
+		background-image: url("url");
+	}
+
+	/* ???? */
+	#context-openlinkincontainertab::before {
+		background-image: url("url");
+	}
+
+	/* Open Link in New Tab */
+	#context-openlinkintab::before {
+		background-image: url("url");
+	}
+
+	/* Open Link in New Container Tab */
+	#context-openlinkinusercontext-menu::before {
+		background-image: url("url");
+	}
+
+	/* Open Link in New Window */
+	#context-openlink::before {
+		background-image: url("url");
+	}
+
+	/* Open Link in New Private Window */
+	#context-openlinkprivate::before {
+		background-image: url("url");
+	}
+
+	/* Bookmark Link… */
+	#context-bookmarklink::before {
+		background-image: url("url");
+	}
+
+	/* Save Link As… */
+	#context-savelink::before {
+		background-image: url("url");
+	}
+
+	/* Save Link to Pocket */
+	#context-savelinktopocket::before {
+		background-image: url("url");
+	}
+
+	/* Copy Email Address */
+	#context-copyemail::before {
+		background-image: url("url");
+	}
+
+	/* Copy Phone Number */
+	#context-copyphone::before {
+		background-image: url("url");
+	}
+
+	/* Copy Link */
+	#context-copylink::before {
+		background-image: url("url");
+	}
+
+	/* Copy Link Without Site Tracking */
+	#context-stripOnShareLink::before {
+		background-image: url("url");
+	}
+
+	/* Send Link to Device */
+	#context-sendlinktodevice::before {
+		background-image: url("url");
+	}
+
+	/* Play */
+	#context-media-play::before {
+		background-image: url("url");
+	}
+
+	/* Mute */
+	#context-media-mute::before {
+		background-image: url("url");
+	}
+
+	/* Unmute */
+	#context-media-unmute::before {
+		background-image: url("url");
+	}
+
+	/* Speed */
+	#context-media-unmute::before {
+		background-image: url("url");
+	}
+
+	/* Loop */
+	#context-media-loop::before {
+		background-image: url("url");
+	}
+
+	/* Exit Full Screen */
+	#context-leave-dom-fullscreen::before {
+		background-image: url("url");
+	}
+
+	/* Full Screen */
+	#context-video-fullscreen::before {
+		background-image: url("url");
+	}
+
+	/* Hide Controls */
+	#context-media-hidecontrols::before {
+		background-image: url("url");
+	}
+
+	/* Show Controls */
+	#context-media-showcontrols::before {
+		background-image: url("url");
+	}
+
+	/* Open Video in New Tab */
+	#context-viewvideo::before {
+		background-image: url("url");
+	}
+
+	/* Watch in Picture-in-Picture */
+	#context-video-pictureinpicture::before {
+		background-image: url("url");
+	}
+
+	/* Reload Image */
+	#context-reloadimage::before {
+		background-image: url("url");
+	}
+
+	/* Open Image in New Tab */
+	#context-viewimage::before {
+		background-image: url("url");
+	}
+
+	/* Save Image As… */
+	#context-saveimage::before {
+		background-image: url("url");
+	}
+
+	/* Take Snapshot… */
+	#context-video-saveimage::before {
+		background-image: url("url");
+	}
+
+	/* Save Video As… */
+	#context-savevideo::before {
+		background-image: url("url");
+	}
+
+	/* Save Audio As… */
+	#context-saveaudio::before {
+		background-image: url("url");
+	}
+
+	/* Copy Image */
+	#context-copyimage-contents::before {
+		background-image: url("url");
+	}
+
+	/* Copy Image Link */
+	#context-copyimage::before {
+		background-image: url("url");
+	}
+
+	/* Copy Video Link */
+	#context-copyvideourl::before {
+		background-image: url("url");
+	}
+
+	/* Copy Audio Link */
+	#context-copyaudiourl::before {
+		background-image: url("url");
+	}
+
+	/* Email Image… */
+	#context-sendimage::before {
+		background-image: url("url");
+	}
+
+	/* Email Video… */
+	#context-sendvideo::before {
+		background-image: url("url");
+	}
+
+	/* Email Audio… */
+	#context-sendaudio::before {
+		background-image: url("url");
+	}
+
+	/* Copy Text From Image */
+	#context-imagetext::before {
+		background-image: url("url");
+	}
+
+	/* View Image Info */
+	#context-viewimageinfo::before {
+		background-image: url("url");
+	}
+
+	/* View Description */
+	#context-viewimagedesc::before {
+		background-image: url("url");
+	}
+
+	/* Set Image as Desktop Background… */
+	#context-setDesktopBackground::before {
+		background-image: url("url");
+	}
+
+	/* Save Page As… */
 	#context-savepage::before {
 		background-image: url("icons/save_page.svg");
 	}
+
+	/* Save Page to Pocket */
+	#context-pocket::before {
+		background-image: url("icons/send_to_device.svg");
+	}
+
+	/* Send Page to Device */
 	#context-sendpagetodevice::before {
 		background-image: url("icons/send_to_device.svg");
 	}
+
+	/* Suggest Strong Password… */
+	#fill-login-generated-password::before {
+		background-image: url("url");
+	}
+	/* Use Relay Email Mask */
+	#use-relay-mask::before {
+		background-image: url("url");
+	}
+	/* Manage Passwords */
+	#manage-saved-logins::before {
+		background-image: url("url");
+	}
+
+	/*? */
+	#context-undo::before {
+		background-image: url("url");
+	}
+
+	/*? */
+	#context-redo::before {
+		background-image: url("url");
+	}
+
+	/* Cut */
+	#context-cut::before {
+		background-image: url("url");
+	}
+
+	/* Copy */
+	#context-copy::before {
+		background-image: url("url");
+	}
+
+	/* Paste */
+	#context-paste::before {
+		background-image: url("url");
+	}
+
+	/* Paste Without Formatting */
+	#context-paste-no-formatting::before {
+		background-image: url("url");
+	}
+
+	/* Delete */
+	#context-delete::before {
+		background-image: url("url");
+	}
+
+	/* Select All */
 	#context-selectall::before {
 		background-image: url("icons/select_all.svg");
 	}
-	#context-inspect::before {
-		background-image: url("icons/inspect.svg");
+
+	/* Highlight Selection */
+	#context-pdfjs-highlight-selection::before {
+		background-image: url("url");
 	}
-	#context-inspect-a11y::before {
-		background-image: url("icons/accessibility.svg");
+
+	/* Reveal Password */
+	#context-reveal-password::before {
+		background-image: url("url");
 	}
-	#context-viewsource::before {
-		background-image: url("icons/view_source.svg");
+
+	/* Print Selection… */
+	#context-print-selection::before {
+		background-image: url("url");
 	}
+
+	/* Undo */
+	#context-pdfjs-undo::before {
+		background-image: url("url");
+	}
+
+	/* Redo */
+	#context-pdfjs-redo::before {
+		background-image: url("url");
+	}
+
+	/* Cut */
+	#context-pdfjs-cut::before {
+		background-image: url("url");
+	}
+
+	/* Copy */
+	#context-pdfjs-copy::before {
+		background-image: url("url");
+	}
+
+	/* Paste */
+	#context-pdfjs-paste::before {
+		background-image: url("url");
+	}
+
+	/* Delete */
+	#context-pdfjs-delete::before {
+		background-image: url("url");
+	}
+
+	/* Select All */
+	#context-pdfjs-selectall::before {
+		background-image: url("url");
+	}
+
+	/* Take Screenshot */
 	#context-take-screenshot::before {
 		background-image: url("icons/screenshot.svg");
 	}
 
-	/* Icons for extensions context menu items */
+	/* Add a Keyword for this Search… */
+	#context-keywordfield::before {
+		background-image: url("url");
+	}
+
+	/* Search XXX for "xxx" */
+	#context-searchselect::before {
+		background-image: url("url");
+	}
+
+	/* Translate Selection… */
+	#context-translate-selection::before {
+		background-image: url("url");
+	}
+
+	/* Check Spelling */
+	#spell-check-enabled::before {
+		background-image: url("url");
+	}
+
+	/* Add Dictionaries… */
+	#spell-add-dictionaries-main::before {
+		background-image: url("url");
+	}
+
+	/* Languages */
+	#spell-dictionaries::before {
+		background-image: url("url");
+	}
+
+	/* Switch Text Direction */
+	#context-bidi-text-direction-toggle::before {
+		background-image: url("url");
+	}
+
+	/* Switch Page Direction */
+	#context-bidi-page-direction-toggle::before {
+		background-image: url("url");
+	}
+
+	/* View Selection Source */
+	#context-viewpartialsource-selection::before {
+		background-image: url("url");
+	}
+
+	/* View Page Source */
+	#context-viewsource::before {
+		background-image: url("icons/view_source.svg");
+	}
+
+	/* Inspect Accessibility Properties */
+	#context-inspect-a11y::before {
+		background-image: url("icons/accessibility.svg");
+	}
+
+	/* Inspect */
+	#context-inspect::before {
+		background-image: url("icons/inspect.svg");
+	}
+
+	/* Learn more about DRM…  */
+	#context-media-eme-learner::before {
+		background-image: url("icons/inspect.svg");
+	}
+
+	/* Icons of extensions context menu items */
 	/* Raindrop */
 	/* Temporarily disabled */
 	/* #jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-menuitem-_save_page {} */
@@ -53,6 +443,7 @@
 	/* Side View */
 	#side-view_mozilla_org-menuitem-_open-in-sidebar {
 		/* Hide previous icon */
+		/* TODO: Maybe make global in the future, if more extensions come */
 		& > .menu-iconic-left {
 			visibility: hidden !important;
 		}
