@@ -180,7 +180,10 @@
 
 		/* Hide tab close button */
 		& .tab-close-button {
-			visibility: hidden;
+			/* TODO: Maybe in future, add option to hide close button on pinned tabs */
+			display: flex !important;
+			visibility: visible !important;
+			margin-left: 8px;
 		}
 	}
 
