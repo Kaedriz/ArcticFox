@@ -164,6 +164,10 @@
 			border-radius: 10px !important;
 		}
 
+		& .tab-content[pinned] {
+			padding: 0 8px !important;
+		}
+
 		/* Center tab icon */
 		& .tab-icon-stack {
 			min-width: 20px;
