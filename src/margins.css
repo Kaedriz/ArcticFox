@@ -40,14 +40,52 @@
 
 /* Changing status bar slightly to match margins */
 #statuspanel {
-  position: absolute;
+	position: absolute;
 	bottom: 5px;
-  left: 5px;
+	left: 5px;
+
+	transition: top 300ms;
 
 	& #statuspanel-label {
 		/** Move to another file */
 		border: 0 !important;
+		border-top-right-radius: 10px !important;
+		padding-right: 8px !important;
 		background-color: var(--tabpanel-background-color) !important;
+	}
+
+	&:has([inactive="true"], [hidden="true"]) {
+		display: flex !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+
+	/* Add rounded corners */
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		right: -6px;
+		height: 20px;
+		width: 20px;
+		border-bottom-left-radius: 50%;
+		background: transparent;
+		box-shadow: 0 10px 0 0 var(--tabpanel-background-color);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 7px;
+		left: 0;
+		height: 20px;
+		width: 20px;
+		border-bottom-left-radius: 50%;
+		background: transparent;
+		box-shadow: 0 10px 0 0 var(--tabpanel-background-color);
+
+		/* Display it under parent element */
+		z-index: -1;
 	}
 }
 
