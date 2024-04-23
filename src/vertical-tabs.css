@@ -91,6 +91,7 @@
 		/* scrollbar-color: transparent transparent !important; */
 
 		/* Always show new tab button */
+		/*? Maybe not needed anymore? */
 		&[overflow] #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
 			display: flex !important;
 		}
@@ -114,6 +115,7 @@
 		visibility: visible !important;
 	}
 
+	/* Hide window controls in fullscreen, when not hovering top */
 	:root:has(#fullscr-toggler:not([hidden])) .titlebar-buttonbox-container {
 		visibility: hidden !important;
 	}
