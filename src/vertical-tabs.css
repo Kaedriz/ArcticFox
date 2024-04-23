@@ -60,35 +60,41 @@
 		/*! Change to var */
 		top: 40px;
 		left: 0;
+		padding: 6px !important;
+		box-sizing: content-box;
 		/*! Change to var */
-		/* width: 288px; */
 		width: 36px;
-		margin: 6px;
 		/*! Change to var */
-		height: calc(100% - 52px);
+		/* Calculate tab bar height, accounted for 2 side of paddings */
+		height: calc(100% - 40px - 2 * var(--AF-margins));
 		background-color: rgb(80, 30, 30) !important;
+		transition: width 250ms;
 
 		/* Fixing change of color of tabs bar in active windows */
 		&:-moz-window-inactive {
 			color: initial !important;
+		}
+
+		&:hover {
+			/* Calculate full width of tab bar when maximized, accounted for 2 side of margins */
+			width: calc(var(--AF-tab-bat-width-max) - 2 * var(--AF-margins));
 		}
 	}
 
 	/* Remove top margin when in fullscreen */
 	:root[inFullscreen] #TabsToolbar {
 		top: 0;
-		height: 100%;
-		transition: top 0.8s ease-out, height 0.8s ease-out;
+		height: calc(100% - 2 * var(--AF-margins));
+		transition: top 800ms ease-out, height 800ms ease-out, width 250ms;
 	}
 
-	/* Remove left padding from tabs bar */
 	#tabbrowser-tabs {
+		/* Remove left padding from tabs bar */
 		padding-inline: 0 !important;
+		/* Fixing horizontal scrolling bug */
 		overflow-y: scroll;
 		overflow-x: hidden;
 		scrollbar-width: none !important;
-		/* scrollbar-color: red blue !important; */
-		/* scrollbar-color: transparent transparent !important; */
 
 		/* Always show new tab button */
 		/*? Maybe not needed anymore? */
