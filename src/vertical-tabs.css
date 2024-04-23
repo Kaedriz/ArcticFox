@@ -208,6 +208,18 @@
 	}
 
 	#tabbrowser-tabpanels {
-		margin-left: 300px;
+		margin-left: 36px;
+		transition: margin-left 250ms;
 	}
+
+	:root[titlepreface="᠎"] {
+		& #tabbrowser-tabpanels {
+			margin-left: 300px;
+		}
+
+		& #TabsToolbar {
+			width: calc(var(--AF-tab-bat-width-max) - 2 * var(--AF-margins));
+		}
+	}
+
 }
