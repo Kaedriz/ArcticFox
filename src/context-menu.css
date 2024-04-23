@@ -49,62 +49,62 @@
 
 	/* Open Link in New Tab */
 	#context-openlinkintab::before {
-		background-image: url("url");
+		background-image: url("icons/new-tab.svg");
 	}
 
 	/* Open Link in New Container Tab */
 	#context-openlinkinusercontext-menu::before {
-		background-image: url("url");
+		background-image: url("icons/new-container-tab.svg");
 	}
 
 	/* Open Link in New Window */
 	#context-openlink::before {
-		background-image: url("url");
+		background-image: url("icons/new-window.svg");
 	}
 
 	/* Open Link in New Private Window */
 	#context-openlinkprivate::before {
-		background-image: url("url");
+		background-image: url("icons/new-private.svg");
 	}
 
 	/* Bookmark Link… */
 	#context-bookmarklink::before {
-		background-image: url("url");
+		background-image: url("icons/add-bookmark.svg");
 	}
 
 	/* Save Link As… */
 	#context-savelink::before {
-		background-image: url("url");
+		background-image: url("icons/save_page.svg");
 	}
 
 	/* Save Link to Pocket */
 	#context-savelinktopocket::before {
-		background-image: url("url");
+		background-image: url("icons/pocket-outline.svg");
 	}
 
 	/* Copy Email Address */
 	#context-copyemail::before {
-		background-image: url("url");
+		background-image: url("icons/mail.svg");
 	}
 
 	/* Copy Phone Number */
 	#context-copyphone::before {
-		background-image: url("url");
+		background-image: url("icons/device-phone.svg");
 	}
 
 	/* Copy Link */
 	#context-copylink::before {
-		background-image: url("url");
+		background-image: url("icons/link.svg");
 	}
 
 	/* Copy Link Without Site Tracking */
 	#context-stripOnShareLink::before {
-		background-image: url("url");
+		background-image: url("icons/copy-without-tracking.svg");
 	}
 
 	/* Send Link to Device */
 	#context-sendlinktodevice::before {
-		background-image: url("url");
+		background-image: url("icons/send_to_device.svg");
 	}
 
 	/* Play */
