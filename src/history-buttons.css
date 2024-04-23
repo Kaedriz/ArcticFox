@@ -1,0 +1,9 @@
+@media (-moz-bool-pref: "arcticfox.history-buttons.alternate-icons") {
+	#back-button .toolbarbutton-icon {
+		list-style-image: url("icons/back.svg");
+	}
+
+	#forward-button .toolbarbutton-icon {
+		list-style-image: url("icons/forward.svg");
+	}
+}
