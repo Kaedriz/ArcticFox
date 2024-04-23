@@ -141,6 +141,11 @@
 			display: none !important;
 		}
 
+		/* Remove top margin for first tab */
+		&:first-of-type {
+			margin-top: 0px !important;
+		}
+
 		/* Fix tab background */
 		& .tab-background {
 			margin: 0 !important;
@@ -161,11 +166,6 @@
 		& .tab-close-button {
 			visibility: hidden;
 		}
-	}
-
-	/* Add space between tabs */
-	.tabbrowser-tab:first-of-type {
-		margin-top: 0px !important;
 	}
 
 	/* Style New Tab button */
