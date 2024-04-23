@@ -207,7 +207,8 @@
 		}
 	}
 
-	/* Remove margin in vertical layout from pinned tabs */
+	/* Remove left margin in vertical layout from pinned tabs */
+	/* TODO: Refactor */
 	#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
 		> #tabbrowser-arrowscrollbox
 		> .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
