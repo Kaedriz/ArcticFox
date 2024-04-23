@@ -38,7 +38,7 @@
 	overflow: hidden;
 }
 
-/* Changing status bat slightly to match margins */
+/* Changing status bar slightly to match margins */
 #statuspanel {
   position: absolute;
 	bottom: 5px;
