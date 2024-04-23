@@ -221,7 +221,7 @@
 	}
 
 	#tabbrowser-tabpanels {
-		margin-left: 36px;
+		margin-left: calc(36px + 2 * var(--AF-margins));
 		transition: margin-left 250ms;
 	}
 
