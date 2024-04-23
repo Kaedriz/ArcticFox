@@ -1,6 +1,12 @@
 /* File with modifications that change Tabs Bar to be vertical */
 
 @media (-moz-bool-pref: "arcticfox.vertical-tabs") {
+	:root {
+		--AF-tab-bat-width-max: 300px;
+		/*! Move to margins file maybe, here just placeholder if margins are disabled  */
+		--AF-margins: 6px;
+	}
+
 	arrowscrollbox#tabbrowser-arrowscrollbox[orient="horizontal"] {
 		flex-direction: column !important;
 	}
