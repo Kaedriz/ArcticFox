@@ -2,7 +2,7 @@
 
 @media (-moz-bool-pref: "arcticfox.vertical-tabs") {
 	:root {
-		--AF-tab-bat-width-max: 300px;
+		--AF-vertical-bar-width-max: 300px;
 		/*! Move to margins file maybe, here just placeholder if margins are disabled  */
 		--AF-margins: 6px;
 	}
@@ -83,7 +83,7 @@
 
 		&:hover {
 			/* Calculate full width of tab bar when maximized, accounted for 2 side of margins */
-			width: calc(var(--AF-tab-bat-width-max) - 2 * var(--AF-margins));
+			width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
 		}
 	}
 
@@ -225,7 +225,7 @@
 		}
 
 		& #TabsToolbar {
-			width: calc(var(--AF-tab-bat-width-max) - 2 * var(--AF-margins));
+			width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
 		}
 	}
 
