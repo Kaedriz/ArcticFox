@@ -38,13 +38,19 @@
 	overflow: hidden;
 }
 
-/* Changing status bar slightly to match margins */
+/* Prevent Status Panel from overlapping Find Bar */
+.browserStack {
+	overflow: clip;
+}
+
+/* Changing Status Bar slightly to match margins */
 #statuspanel {
 	position: absolute;
 	bottom: 0 !important;
 	left: 0 !important;
 
 	transition: bottom 150ms !important;
+	transition-delay: 150ms !important;
 
 	& #statuspanel-label {
 		/** Move to another file */
