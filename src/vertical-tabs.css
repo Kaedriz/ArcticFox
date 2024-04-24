@@ -151,6 +151,9 @@
 		/* Fix for invisible tabs after closing */
 		&:not([fadein]) {
 			display: none !important;
+			/* Must be set, probably bc of some Mozilla internal dead tabs detection, otherwise, tabs would stay hidden forever */
+			min-width: 0.1px !important;
+			max-width: 0.1px !important;
 		}
 
 		/* Remove top margin for first tab */
