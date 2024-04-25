@@ -239,5 +239,4 @@
 			width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
 		}
 	}
-
 }
