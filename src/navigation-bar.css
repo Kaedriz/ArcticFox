@@ -4,5 +4,9 @@
 }
 
 .browser-toolbar {
-	background: transparent !important;
+/** Vertical Bar support */
+
+/* Fix overlapping of urlbar by vertical tabs */
+#urlbar {
+	z-index: 6 !important;
 }
