@@ -127,16 +127,6 @@
 		visibility: visible !important;
 	}
 
-	/* Hide window controls in fullscreen, when not hovering top */
-	:root:has(#fullscr-toggler:not([hidden])) .titlebar-buttonbox-container {
-		visibility: hidden !important;
-	}
-
-	/* Hide window controls in fullscreen, when playing media */
-	:root[inDOMFullscreen] .titlebar-buttonbox-container {
-		visibility: hidden !important;
-	}
-
 	#browser {
 		background-color: green;
 		/* background-color: var(--tabpanel-background-color); */
