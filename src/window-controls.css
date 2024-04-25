@@ -35,4 +35,9 @@
 	:root[inDOMFullscreen] .titlebar-buttonbox-container {
 		visibility: hidden !important;
 	}
+
+	/* Don't push Customization Toolbar aside in popups, as there is normal title bar usually */
+	:root:has(#TabsToolbar[collapsed]) #nav-bar{
+		padding-right: 0px !important;
+	}
 }
