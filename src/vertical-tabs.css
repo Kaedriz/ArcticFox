@@ -94,6 +94,13 @@
 		transition: top 800ms ease-out, height 800ms ease-out, width 250ms;
 	}
 
+	:root:has(#fullscr-toggler[hidden]) #TabsToolbar {
+		top: 40px;
+		height: calc(100% - 2 * var(--AF-margins) - 40px);
+		/* TODO: Implement animation */
+		transition-property: width;
+	}
+
 	#tabbrowser-tabs {
 		/* Remove left padding from tabs bar */
 		padding-inline: 0 !important;
