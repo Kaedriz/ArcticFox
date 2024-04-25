@@ -230,6 +230,10 @@
 		margin-left: 0;
 	}
 
+	:root:has(#TabsToolbar[collapsed]) #TabsToolbar {
+		display: none !important;
+	}
+
 	:root[titlepreface="᠎"] {
 		& #tabbrowser-tabpanels {
 			margin-left: 300px;
