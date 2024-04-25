@@ -127,11 +127,6 @@
 		visibility: visible !important;
 	}
 
-	/* Hide window controls in fullscreen, when not hovering top */
-	:root:has(#fullscr-toggler:not([hidden])) .titlebar-buttonbox-container {
-		visibility: hidden !important;
-	}
-
 	#browser {
 		background-color: green;
 		/* background-color: var(--tabpanel-background-color); */
@@ -228,6 +223,13 @@
 		transition: margin-left 250ms;
 	}
 
+	/* Fix for popups also including margins */
+	:root:has(#TabsToolbar[collapsed]) #tabbrowser-tabpanels,
+	/* Fix for fullscreen pages including margin for Vertical Tabs */
+	:root[inDOMFullscreen] #tabbrowser-tabpanels {
+		margin-left: 0;
+	}
+
 	:root[titlepreface="᠎"] {
 		& #tabbrowser-tabpanels {
 			margin-left: 300px;
@@ -237,5 +239,4 @@
 			width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
 		}
 	}
-
 }

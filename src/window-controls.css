@@ -1,7 +1,5 @@
 /* Provide window control icons similar to KDE Breeze when using themes */
 
-/* Taken from https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_force_linux_system_style.css */
-
 /* TODO: Styling could be changed a little */
 @media (-moz-bool-pref: "arcticfox.linux-windows-controls") {
 	/* Dynamic color for window controls icons */
@@ -24,5 +22,17 @@
 	}
 	.titlebar-close > .toolbarbutton-icon {
 		background-image: url("icons/close.svg") !important;
+	}
+
+	/** With Vertical Tabs */
+
+	/* Hide window controls in fullscreen, when not hovering top */
+	:root:has(#fullscr-toggler:not([hidden])) .titlebar-buttonbox-container {
+		visibility: hidden !important;
+	}
+
+	/* Hide window controls in fullscreen, when playing media */
+	:root[inDOMFullscreen] .titlebar-buttonbox-container {
+		visibility: hidden !important;
 	}
 }
