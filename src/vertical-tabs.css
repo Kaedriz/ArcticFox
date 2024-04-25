@@ -224,7 +224,9 @@
 	}
 
 	/* Fix for popups also including margins */
-	:root:has(#TabsToolbar[collapsed]) #tabbrowser-tabpanels {
+	:root:has(#TabsToolbar[collapsed]) #tabbrowser-tabpanels,
+	/* Fix for fullscreen pages including margin for Vertical Tabs */
+	:root[inDOMFullscreen] #tabbrowser-tabpanels {
 		margin-left: 0;
 	}
 
