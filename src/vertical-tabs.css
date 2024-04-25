@@ -228,6 +228,11 @@
 		transition: margin-left 250ms;
 	}
 
+	/* Fix for popups also including margins */
+	:root:has(#TabsToolbar[collapsed]) #tabbrowser-tabpanels {
+		margin-left: 0;
+	}
+
 	:root[titlepreface="᠎"] {
 		& #tabbrowser-tabpanels {
 			margin-left: 300px;
