@@ -7,6 +7,7 @@
 		--AF-margins: 6px;
 	}
 
+	/**  Main tweaks needed to get vertical tabs going */
 	arrowscrollbox#tabbrowser-arrowscrollbox[orient="horizontal"] {
 		flex-direction: column !important;
 	}
@@ -19,12 +20,12 @@
 
 		height: 100% !important;
 		width: 100% !important;
-	}
 
-	/* Resetting toolbar buttons margin */
-	#TabsToolbar-customization-target toolbarbutton {
-		padding: 0 !important;
-		margin: 0 !important;
+		/* Resetting toolbar buttons margin */
+		toolbarbutton {
+			padding: 0 !important;
+			margin: 0 !important;
+		}
 	}
 
 	/* Container with tabs */
@@ -42,7 +43,7 @@
 		z-index: 6;
 	}
 
-	/* Window controls */
+	/** Window controls */
 	.titlebar-buttonbox-container {
 		position: absolute;
 		top: 9px;
@@ -61,19 +62,22 @@
 		padding-right: 93px !important;
 	}
 
+	/** Vertical Bar */
 	#TabsToolbar {
 		position: absolute;
-		/*! Change to var */
+		/* TODO: Change to var */
 		top: 40px;
 		left: 0;
 		padding: 6px !important;
 		box-sizing: content-box;
-		/*! Change to var */
+		/*! Change to var maybe */
 		width: 36px;
-		/*! Change to var */
 		/* Calculate tab bar height, accounted for 2 side of paddings */
 		height: calc(100% - 40px - 2 * var(--AF-margins));
-		background-color: rgb(80, 30, 30) !important;
+		background-color: var(
+			--af-vertical-bar-bg,
+			var(--toolbar-bgcolor)
+		) !important;
 		transition: width 250ms;
 
 		/* Fixing change of color of tabs bar in active windows */
@@ -116,6 +120,35 @@
 		}
 	}
 
+	/* Displace position of vertical tabs when there are pinned tabs */
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(1)) {
+		padding-top: 40px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(2)) {
+		padding-top: 80px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(3)) {
+		padding-top: 120px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(4)) {
+		padding-top: 120px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(5)) {
+		padding-top: 120px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(6)) {
+		padding-top: 120px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(7)) {
+		padding-top: 120px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(8)) {
+		padding-top: 120px;
+	}
+	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(9)) {
+		padding-top: 120px;
+	}
+
 	/* Hide tabs scroll buttons */
 	#scrollbutton-up,
 	#scrollbutton-down,
@@ -148,7 +181,7 @@
 		padding: 0 !important;
 		padding-inline: 0 !important;
 		margin: 2px 0 2px 0 !important;
-		background-color: red !important;
+		/* background-color: red !important; */
 
 		/* Fix for invisible tabs after closing */
 		&:not([fadein]) {
@@ -160,15 +193,43 @@
 
 		/* Remove top margin for first tab */
 		&:first-of-type {
-			margin-top: 0px !important;
+			/* For now removed for consistency across tabs */
+			/* margin-top: 0px !important; */
 		}
 
-		/* Fix tab background */
+		/* Background on hover */
+		&:hover .tab-background {
+			background-color: var(
+				--af-tabs-hovered-bg,
+				rgba(0, 0, 0, 0.1)
+			) !important;
+		}
+
+		/* Tab background */
 		& .tab-background {
 			margin: 0 !important;
+			/* TODO: Change to var */
 			border-radius: 10px !important;
+			background-color: var(--af-tabs-bg, transparent);
+
+			/* Background of selected tab */
+			&[selected] {
+				background-color: var(
+					--af-tabs-selected-bg,
+					rgba(0, 0, 0, 0.3)
+				) !important;
+			}
+
+			/* TODO: Some other indicator of multiple selected tabs, ex. outline */
+			&[multiselected] {
+				background-color: var(
+					--af-tabs-multiselected-bg,
+					transparent
+				) !important;
+			}
 		}
 
+		/* Remove horizontal padding on pinned tabs */
 		& .tab-content[pinned] {
 			padding: 0 8px !important;
 		}
@@ -176,12 +237,24 @@
 		/* Center tab icon */
 		& .tab-icon-stack {
 			min-width: 20px;
+			max-width: 20px;
 			justify-content: center;
 
 			& .tab-icon-image {
 				margin: 0 !important;
+				margin-inline-end: 0 !important;
 			}
 		}
+
+		/* Text on expanded tab */
+		& .tab-label {
+			color: var(--af-tabs-fg) !important;
+		}
+
+		& .tab-secondary-label {
+			display: none;
+		}
+		/* TODO: Hide secondary label appearing, ex. when playing media */
 
 		/* Hide tab close button */
 		& .tab-close-button {
@@ -189,6 +262,53 @@
 			display: flex !important;
 			visibility: visible !important;
 			margin-left: 8px;
+		}
+	}
+
+	.tabbrowser-tab[pinned] {
+		/* TODO: Change to sticky */
+		/* TODO: And while at it, change tabs margin to just empty space in background but still interact able */
+		position: absolute !important;
+		left: 0;
+		top: 0;
+		width: 100%;
+
+		& .tab-background {
+			background-color: var(--af-tabs-pinned-bg) !important;
+
+			/* Pinned, selected tab */
+			&[selected] {
+				background-color: var(
+					--af-tabs-selected-bg,
+					rgba(0, 0, 0, 0.3)
+				) !important;
+			}
+		}
+
+		/* Set margin to move normal tabs, based on number of pinned tabs */
+		&:nth-of-type(2) {
+			top: 40px;
+		}
+		&:nth-of-type(3) {
+			top: 80px;
+		}
+		&:nth-of-type(4) {
+			top: 120px;
+		}
+		&:nth-of-type(5) {
+			top: 160px;
+		}
+		&:nth-of-type(6) {
+			top: 200px;
+		}
+		&:nth-of-type(7) {
+			top: 240px;
+		}
+		&:nth-of-type(8) {
+			top: 280px;
+		}
+		&:nth-of-type(9) {
+			top: 320px;
 		}
 	}
 

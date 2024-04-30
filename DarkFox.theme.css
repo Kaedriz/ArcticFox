@@ -4,5 +4,25 @@
 		/* color-scheme: dark !important; */
 
 		/* Variables here */
+
+		/** Navigation Bar */
+		--af-nav-bar-bg: unset;
+
+		/* Url Bar */
+		--af-address-bar-bg: unset;
+
+		/** Vertical Bar */
+		--af-vertical-bar-bg: unset;
+
+		/** Tabs */
+		--af-tabs-fg: unset;
+		--af-tabs-bg: unset;
+		--af-tabs-hovered-bg: unset;
+		--af-tabs-selected-bg: unset;
+		--af-tabs-multiselected-bg: green;
+		--af-tabs-pinned-bg: purple;
+
+		/** Pinned Tabs Area */
+
 	}
 }
