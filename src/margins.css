@@ -5,7 +5,7 @@
 #sidebar-box {
 	margin: 0 0 6px 6px;
 	border-radius: 12px;
-	background-color: darkgrey !important;
+	background-color: var(--tabpanel-background-color) !important;
 	max-width: none !important;
 	min-width: 0px !important;
 	overflow: hidden;

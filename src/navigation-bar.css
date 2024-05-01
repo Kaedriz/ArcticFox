@@ -8,12 +8,12 @@
 }
 
 #nav-bar {
-	background-color: var(--af-nav-bar-bg, var(--toolbar-bgcolor)) !important;
+	background-color: var(--af-nav-bar-bg, var(--tabpanel-background-color)) !important;
 }
 
 /** Address Field */
 #urlbar {
-	background-color: var(--af-address-bar-bg, var(--toolbar-bgcolor)) !important;
+	background-color: var(--af-address-bar-bg, var(--tabpanel-background-color)) !important;
 
 	& #urlbar-background {
 		background-color: var(
@@ -23,7 +23,7 @@
 	}
 
 	&[open] #urlbar-background {
-		background-color: #363940 !important;
+		background-color: #1E1D24 !important;
 	}
 }
 

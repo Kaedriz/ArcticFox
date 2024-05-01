@@ -76,7 +76,7 @@
 		height: calc(100% - 40px - 2 * var(--AF-margins));
 		background-color: var(
 			--af-vertical-bar-bg,
-			var(--toolbar-bgcolor)
+			var(--tabpanel-background-color)
 		) !important;
 		transition: width 250ms;
 
@@ -168,8 +168,8 @@
 	}
 
 	#browser {
-		background-color: green;
-		/* background-color: var(--tabpanel-background-color); */
+		/* background-color: green; */
+		background-color: var(--tabpanel-background-color);
 	}
 
 	.tabbrowser-tab {
