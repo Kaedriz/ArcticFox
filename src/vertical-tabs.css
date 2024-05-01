@@ -348,7 +348,7 @@
 		transition: margin-left 250ms;
 	}
 
-	/* Fix for popups also including margins */
+	/* Fix for browser popups also including margins */
 	:root:has(#TabsToolbar[collapsed]) #tabbrowser-tabpanels,
 	/* Fix for fullscreen pages including margin for Vertical Tabs */
 	:root[inDOMFullscreen] #tabbrowser-tabpanels {
