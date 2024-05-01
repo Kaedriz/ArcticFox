@@ -323,7 +323,10 @@
 			width: 100%;
 
 			&:hover {
-				background-color: blue !important;
+				background-color: var(
+					--af-new-tab-hovered-bg,
+					rgba(0, 0, 0, 0.1)
+				) !important;
 			}
 		}
 
