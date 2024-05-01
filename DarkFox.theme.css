@@ -22,7 +22,10 @@
 		--af-tabs-multiselected-bg: green;
 		--af-tabs-pinned-bg: purple;
 
-		/** Pinned Tabs Area */
+		/* New Tab button */
+		/* --af-new-tab--bg: unset; */
+		--af-new-tab-hovered-bg: unset;
 
+		/** Pinned Tabs Area */
 	}
 }
