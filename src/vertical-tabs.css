@@ -240,6 +240,9 @@
 			min-width: 20px;
 			max-width: 20px;
 			justify-content: center;
+			/* Fix for displacement when playing audio */
+			/* TODO: If added variable icon size, include this too */
+			grid-template-columns: 16px;
 
 			& .tab-icon-image {
 				margin: 0 !important;
