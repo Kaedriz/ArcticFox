@@ -120,6 +120,7 @@
 		}
 	}
 
+	/* TODO: Maybe in future, change to variable calc to accommodate for different tabs sizes */
 	/* Displace position of vertical tabs when there are pinned tabs */
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(1)) {
 		padding-top: 40px;
@@ -131,22 +132,22 @@
 		padding-top: 120px;
 	}
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(4)) {
-		padding-top: 120px;
+		padding-top: 160px;
 	}
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(5)) {
-		padding-top: 120px;
+		padding-top: 200px;
 	}
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(6)) {
-		padding-top: 120px;
+		padding-top: 240px;
 	}
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(7)) {
-		padding-top: 120px;
+		padding-top: 280px;
 	}
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(8)) {
-		padding-top: 120px;
+		padding-top: 320px;
 	}
 	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(9)) {
-		padding-top: 120px;
+		padding-top: 360px;
 	}
 
 	/* Hide tabs scroll buttons */
