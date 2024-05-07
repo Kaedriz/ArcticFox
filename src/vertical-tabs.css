@@ -262,12 +262,15 @@
 	}
 
 	.tabbrowser-tab[pinned] {
-		/* TODO: Change to sticky */
 		/* TODO: And while at it, change tabs margin to just empty space in background but still interact able */
-		position: absolute !important;
+		/* position: absolute !important; */
+		position: sticky !important;
 		left: 0;
-		top: 0;
+		top: 2px;
 		width: 100%;
+
+		/* Show above pinned tab background */
+		z-index: 1;
 
 		& .tab-background {
 			background-color: var(--af-tabs-pinned-bg) !important;
@@ -283,28 +286,28 @@
 
 		/* Set margin to move normal tabs, based on number of pinned tabs */
 		&:nth-of-type(2) {
-			top: 40px;
+			top: 42px;
 		}
 		&:nth-of-type(3) {
-			top: 80px;
+			top: 82px;
 		}
 		&:nth-of-type(4) {
-			top: 120px;
+			top: 122px;
 		}
 		&:nth-of-type(5) {
-			top: 160px;
+			top: 162px;
 		}
 		&:nth-of-type(6) {
-			top: 200px;
+			top: 202px;
 		}
 		&:nth-of-type(7) {
-			top: 240px;
+			top: 242px;
 		}
 		&:nth-of-type(8) {
-			top: 280px;
+			top: 282px;
 		}
 		&:nth-of-type(9) {
-			top: 320px;
+			top: 322px;
 		}
 	}
 
