@@ -20,12 +20,13 @@
 		--af-tabs-hovered-bg: unset;
 		--af-tabs-selected-bg: unset;
 		--af-tabs-multiselected-bg: green;
-		--af-tabs-pinned-bg: purple;
+		--af-tabs-pinned-bg: unset;
+
+		/** Pinned Tabs Area */
+		--af-pinned-tabs-bg: unset;
 
 		/* New Tab button */
 		/* --af-new-tab--bg: unset; */
 		--af-new-tab-hovered-bg: unset;
-
-		/** Pinned Tabs Area */
 	}
 }

@@ -88,6 +88,11 @@
 		&:hover {
 			/* Calculate full width of tab bar when maximized, accounted for 2 side of margins */
 			width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
+
+			/* Support for pinned tabs area expand on hover */
+			& #tabbrowser-tabs::after {
+				width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
+			}
 		}
 	}
 
@@ -113,41 +118,28 @@
 		overflow-x: hidden;
 		scrollbar-width: none !important;
 
+
+		&::after {
+			position: fixed;
+			content: "";
+			/* TODO: Accommodate for hidable nav bar */
+			top: 40px;
+			left: 6px;
+			/* TODO: Change to calc variable */
+			height: 156px;
+			/* TODO: Change to variable */
+			width: 36px;
+			transition: width 250ms;
+			border-radius: 10px;
+			/* TODO: Change to variable for theming */
+			background-color: var(--af-pinned-tabs-bg, #1E1D24);
+		}
+
 		/* Always show new tab button */
 		/*? Maybe not needed anymore? */
 		&[overflow] #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
 			display: flex !important;
 		}
-	}
-
-	/* TODO: Maybe in future, change to variable calc to accommodate for different tabs sizes */
-	/* Displace position of vertical tabs when there are pinned tabs */
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(1)) {
-		padding-top: 40px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(2)) {
-		padding-top: 80px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(3)) {
-		padding-top: 120px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(4)) {
-		padding-top: 160px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(5)) {
-		padding-top: 200px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(6)) {
-		padding-top: 240px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(7)) {
-		padding-top: 280px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(8)) {
-		padding-top: 320px;
-	}
-	#tabbrowser-tabs:has(.tabbrowser-tab[pinned]:nth-of-type(9)) {
-		padding-top: 360px;
 	}
 
 	/* Hide tabs scroll buttons */
