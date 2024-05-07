@@ -124,14 +124,13 @@
 			content: "";
 			/* TODO: Accommodate for hidable nav bar */
 			top: 40px;
-			left: 6px;
+			left: var(--AF-margins);
 			/* TODO: Change to calc variable */
 			height: 156px;
 			/* TODO: Change to variable */
 			width: 36px;
 			transition: width 250ms;
 			border-radius: 10px;
-			/* TODO: Change to variable for theming */
 			background-color: var(--af-pinned-tabs-bg, #1E1D24);
 		}
 
@@ -247,10 +246,10 @@
 			color: var(--af-tabs-fg) !important;
 		}
 
+		/* Hide secondary label appearing, ex. when playing media */
 		& .tab-secondary-label {
 			display: none;
 		}
-		/* TODO: Hide secondary label appearing, ex. when playing media */
 
 		/* Hide tab close button */
 		& .tab-close-button {
