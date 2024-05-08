@@ -21,7 +21,7 @@
 	}
 
 	/* Change indicator color for muted audio */
-	.tabbrowser-tab .tab-icon-overlay:not([crashed])[muted] {
+	.tab-icon-overlay:not([crashed])[muted] {
 		fill: #df5c5c !important;
 	}
 }

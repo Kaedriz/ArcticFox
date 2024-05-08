@@ -4,6 +4,29 @@
 }
 
 .browser-toolbar {
+	/*  */
+}
+
+#nav-bar {
+	background-color: var(--af-nav-bar-bg, var(--tabpanel-background-color)) !important;
+}
+
+/** Address Field */
+#urlbar {
+	background-color: var(--af-address-bar-bg, var(--tabpanel-background-color)) !important;
+
+	& #urlbar-background {
+		background-color: var(
+			--af-address-bar-bg,
+			light-dark(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.3))
+		) !important;
+	}
+
+	&[open] #urlbar-background {
+		background-color: #1E1D24 !important;
+	}
+}
+
 /** Vertical Bar support */
 
 /* Fix overlapping of urlbar by vertical tabs */
