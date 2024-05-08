@@ -118,7 +118,6 @@
 		overflow-x: hidden;
 		scrollbar-width: none !important;
 
-
 		&::after {
 			position: fixed;
 			content: "";
@@ -131,7 +130,7 @@
 			width: 36px;
 			transition: width 250ms;
 			border-radius: 10px;
-			background-color: var(--af-pinned-tabs-bg, #1E1D24);
+			background-color: var(--af-pinned-tabs-bg, #1e1d24);
 		}
 
 		/* Always show new tab button */
