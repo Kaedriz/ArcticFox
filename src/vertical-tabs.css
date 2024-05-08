@@ -68,7 +68,7 @@
 		/* TODO: Change to var */
 		top: 40px;
 		left: 0;
-		padding: 6px !important;
+		padding: 0 var(--AF-margins, 0) var(--AF-margins, 0) var(--AF-margins, 0) !important;
 		box-sizing: content-box;
 		/*! Change to var maybe */
 		width: 36px;
@@ -185,7 +185,7 @@
 		/* Remove top margin for first tab */
 		&:first-of-type {
 			/* For now removed for consistency across tabs */
-			/* margin-top: 0px !important; */
+			margin-top: 0px !important;
 		}
 
 		/* Background on hover */
