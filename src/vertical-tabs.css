@@ -10,6 +10,8 @@
 	/**  Main tweaks needed to get vertical tabs going */
 	arrowscrollbox#tabbrowser-arrowscrollbox[orient="horizontal"] {
 		flex-direction: column !important;
+		/* There is something that sets height size based on window size (?), and this fixes that */
+		height: fit-content;
 	}
 
 	/* Container for tab container & toolbar buttons */
