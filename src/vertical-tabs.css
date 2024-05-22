@@ -86,15 +86,16 @@
 		&:-moz-window-inactive {
 			color: initial !important;
 		}
+	}
 
-		&:hover {
-			/* Calculate full width of tab bar when maximized, accounted for 2 side of margins */
+	/* Expand Vertical Bar on hover, but not in fullscreen */
+	:root:not([inDOMFullscreen="true"])	#TabsToolbar:hover {
+		/* Calculate full width of tab bar when maximized, accounted for 2 side of margins */
+		width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
+
+		/* Support for pinned tabs area expand on hover */
+		& #tabbrowser-tabs::after {
 			width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
-
-			/* Support for pinned tabs area expand on hover */
-			& #tabbrowser-tabs::after {
-				width: calc(var(--AF-vertical-bar-width-max) - 2 * var(--AF-margins));
-			}
 		}
 	}
 
@@ -105,11 +106,21 @@
 		transition: top 800ms ease-out, height 800ms ease-out, width 250ms;
 	}
 
+	/* Conditional on top bar visibility in fullscreen*/
 	:root:has(#fullscr-toggler[hidden]) #TabsToolbar {
 		top: 40px;
 		height: calc(100% - 2 * var(--AF-margins) - 40px);
 		/* TODO: Implement animation */
 		transition-property: width;
+	}
+
+	:root[inDOMFullscreen="true"] #TabsToolbar {
+		/* TODO: Change to calc maybe */
+		left: -48px;
+	}
+
+	:root[inDOMFullscreen="true"] .toolbar-items {
+		visibility: visible;
 	}
 
 	#tabbrowser-tabs {
@@ -140,6 +151,11 @@
 		&[overflow] #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
 			display: flex !important;
 		}
+	}
+
+	:root[inDOMFullscreen="true"] #tabbrowser-tabs::after {
+		/* TODO: Change to calc maybe */
+		left: -48px;
 	}
 
 	/* Hide tabs scroll buttons */
