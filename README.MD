@@ -1,12 +1,12 @@
 # Arctic Fox
 
-| :exclamation: Development is for now paused, as Mozilla is working on native vertical tabs, and it seems pointless to continue this now. If you want vertical tabs on Gecko right now, your only options seems to by Floorp. |
+| :exclamation: Development is for now paused, as Mozilla is working on native vertical tabs, and it seems pointless to continue this now. If you want vertical tabs on Gecko right now, your only options seems to be Floorp. |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 | :exclamation: Development will resume when somewhat stable version of vertical tabs lands, as of right now they are only proof of concept prototypes, which are object of change. |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| :zap: For now I will work on Vivaldi theme with similar aesthetics, if you are interested check it out when I will publish it. |
+| :zap: For now I will work on Vivaldi theme with similar aesthetics, if you are interested in that, check it out when I publish it. |
 | ------------------------------------------------------------------------------------------------------------------------------ |
 
 🦊 Firefox theme, which purpose is to give you capabilities to customize your Firefox. This theme also aims to take some things from Arc Browser (hence the name), but in a customizable way. But bear in mind that this isn't one size fit it all theme. It's a firstly a theme I would want to use, then some options options on top of that, that are easy to implement. If you want one instead, go check out [this repo](https://github.com/MrOtherGuy/firefox-csshacks) full of css hacks.
